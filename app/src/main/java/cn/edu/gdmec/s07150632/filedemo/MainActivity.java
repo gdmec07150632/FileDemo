@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         path = fPhonedicetory.getPath();
         try {
             FileOutputStream fos = openFileOutput("test.txt",MODE_PRIVATE);
-            fos.write("hello".getBytes());
+            fos.write("Hello".getBytes());
             fos.close();
         }catch (Exception e){
             e.printStackTrace();
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         listFiles(path);
     }
     private boolean listFiles(String path){
-        name = "路径:"+path+"\n文件路径：\n";
+        name = "路径："+path+"\n文件路径：\n";
         File file = new File(path);
         if (file.listFiles()!=null&&file.listFiles().length>0){
             for (File f:file.listFiles()){
